@@ -1,0 +1,605 @@
+			
+
+
+https://github.com/VladimirD25
+
+
+
+			JSON
+
+ -- 4. Создать внешний репозиторий c названием JSON.--
+
+https://github.com/VladimirD25/JSON.git
+
+ -- 5. Клонировать репозиторий JSON на локальный компьютер.--
+
+VladimirDobranitsa@Vladimir MINGW64 /d/GitHub
+$ git clone https://github.com/VladimirD25/JSON.git
+Cloning into 'JSON'...
+warning: You appear to have cloned an empty repository.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/GitHub
+$ ls -la
+total 4
+drwxr-xr-x 1 VladimirDobranitsa 197121 0 Nov  9 15:37 ./
+drwxr-xr-x 1 VladimirDobranitsa 197121 0 Nov  9 15:29 ../
+drwxr-xr-x 1 VladimirDobranitsa 197121 0 Nov  9 15:37 JSON/
+
+ -- 6. Внутри локального JSON создать файл “new.json”.--
+
+VladimirDobranitsa@Vladimir MINGW64 /d/GitHub/JSON (main)
+$ touch new.json
+
+ -- 7. Добавить файл под гит.-- 
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/json (main)
+$ git add new.json
+
+ --8. Закоммитить файл.--
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/json (main)
+$ git commit -m "add new.json"
+[main (root-commit) 964a73a] add new.json
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.json
+
+
+ --9. Отправить файл на внешний GitHub репозиторий.--
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/json (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 220 bytes | 220.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VladimirD25/JSON.git
+ * [new branch]      main -> main
+
+ --10. Отредактировать содержание файла “new.json” - написать информацию о себе 
+(ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате JSON.--
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/json (main)
+$ vim new.json
+
+{
+	"first_name": "Vladimir",
+	"second_name": "Olegovich",
+	"last_name": "Dobranitsa",
+	"age": 35,
+	"pets": "none",
+	"future_salary": "$400"
+}
+
+ --11. Отправить изменения на внешний репозиторий.--
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/json (main)
+$ git commit -am "modify new.json"
+warning: in the working copy of 'new.json', LF will be replaced by CRLF the next time Git touches it
+[main 5659fb8] modify new.json
+ 1 file changed, 8 insertions(+)
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/json (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 361 bytes | 361.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VladimirD25/JSON.git
+   964a73a..5659fb8  main -> main
+
+
+ --12. Создать файл preferences.json--
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/json (main)
+$ touch preferences.json
+
+ --13. В файл preferences.json добавить информацию о своих предпочтениях 
+(Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате JSON.--
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/json (main)
+$ vim preferences.json
+
+{
+"favorite_movie": "movies_by_Guy_Ritchie",
+"favorite_tv_show": "Billions",
+"favorite_dish": "cannelloni",
+"favorite_season": "spring",
+"country_to_visit": "Norway"
+}
+
+ --14. Создать файл sklls.json добавить информацию о скиллах которые будут изучены на курсе в формате JSON--
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/json (main)
+$ cat > skills.json
+{
+"skills": [
+"Basic theory SDLC, STLC",
+"Client-server architecture",
+"HTTP",
+"What is JSON, XML",
+"API testing via Postman (JS, API autotests)",
+"Removing and reading logs from an external server",
+"Sniffing http web traffic via Charles and Fiddler",
+"Dev Tools of web browsers",
+"Mobile testing",
+"Feature iOS, Android, guidelines",
+"ADB (android device management)",
+"Setting up proxy and vpn on iOS and Android",
+"Interception (sniffing) of mobile traffic via Charles and Fiddler on iOS and Android",
+"Command line (terminal) Linux",
+"Basics of bash scripting, automation of routine tasks on the server",
+"Access to remote servers",
+"SQL basics",
+"Load testing in Jmeter",
+"Scrum development methodology",
+"Python. Basic learning"
+]
+}
+
+ --15. Отправить сразу 2 файла на внешний репозиторий.--
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/json (main)
+$ git add preferences.json skills.json
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/json (main)
+$ git commit -m "add preferences.json skills.json"
+[main da4550c] add preferences.json skills.json
+ 2 files changed, 30 insertions(+)
+ create mode 100644 preferences.json
+ create mode 100644 skills.json
+
+ --16. На веб интерфейсе создать файл bug_report.json.--
+
+https://github.com/VladimirD25/JSON/blob/main/bug_report.json
+
+ --17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.--
+
+"add bug_report.json"
+
+ --18. На веб интерфейсе модифицировать файл bug_report.json, добавить баг репорт в формате JSON.--
+
+{
+"id":"B1",
+"summary":"Incomplete digits displaying of the number of items in the cart when entering a three-digit value",
+"preconditions": [ 
+                  "site is opened", 
+                  "any item added to cart", 
+                  "cart is opened"
+                 ],
+"steps to reproduce": [
+                       "1) enter '99' in the number of units of goods, press 'Enter'", 
+                       "2) click on '+' button"
+                      ],
+"expected result": "Full displaying of digits for the number of items in the cart",
+"actual result": "the digits of the number of items in the cart are not displayed completely",
+"severity": "minor",
+"priority": "low",
+"environment": "windows 10 Chrome 107.0.5304.88"
+"attachment": "link",
+"reporter": "Vladimir"
+}
+
+ --19. Сделать Commit changes (сохранить) изменения на веб интерфейсе.--
+
+"modify bug_report"
+
+ --20. Синхронизировать внешний и локальный репозиторий JSON--
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/json (main)
+$ git push
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.13 KiB | 579.00 KiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/VladimirD25/JSON.git
+   597ef58..cb2d68e  main -> main
+
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/json (main)
+$ git pull
+Merge made by the 'ort' strategy.
+ bug_report.json | 20 ++++++++++++++++++++
+ 1 file changed, 20 insertions(+)
+ create mode 100644 bug_report.json
+
+
+				XML
+
+
+ 21. Создать внешний репозиторий c названием XML.
+
+https://github.com/VladimirD25/XML.git
+
+ 22. Клонировать репозиторий XML на локальный компьютер.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github
+$ git clone https://github.com/VladimirD25/XML.git
+Cloning into 'XML'...
+warning: You appear to have cloned an empty repository.
+
+ 23. Внутри локального XML создать файл “new.xml”.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/xml (main)
+$ touch new.xml
+
+ 24. Добавить файл под гит.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/xml (main)
+$ git add new.xml
+
+ 25. Закоммитить файл.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/xml (main)
+$ git commit -m "add new.xml"
+[main (root-commit) e71a181] add new.xml
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.xml
+
+ 26. Отправить файл на внешний GitHub репозиторий.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/xml (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 218 bytes | 218.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VladimirD25/XML.git
+ * [new branch]      main -> main
+
+ 27. Отредактировать содержание файла “new.xml” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате XML.
+ 
+VladimirDobranitsa@Vladimir MINGW64 /d/github/xml (main)
+$ vim new.xml
+
+<about_me>
+<first_name>Vladimir</first_name>
+<second_name>Olegovich</second_name>
+<last_name>Dobranitsa</last_name>
+<age>35</age>
+<pets>none</pets>
+<future_salary>$400</future_salary>
+</about_me>
+
+ 28. Отправить изменения на внешний репозиторий.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/xml (main)
+$ git commit -am "modify new.xml"
+warning: in the working copy of 'new.xml', LF will be replaced by CRLF the next
+time Git touches it
+[main 312d42d] modify new.xml
+ 1 file changed, 8 insertions(+)
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/xml (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 375 bytes | 375.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VladimirD25/XML.git
+   e71a181..312d42d  main -> main
+
+ 29. Создать файл preferences.xml
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/xml (main)
+$ touch preferences.xml
+
+ 30. В файл preferences.xml добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате XML.
+ 
+VladimirDobranitsa@Vladimir MINGW64 /d/github/xml (main)
+$ vim preferences.xml
+
+<preferences>
+<favorite_movie>movies_by_Guy_Ritchie</favorite_movie>
+<favorite_tv_show>Billions</favorite_tv_show>
+<favorite_dish>cannelloni</favorite_dish>
+<favorite_season>spring</favorite_season>
+<country_to_visit>Norway</country_to_visit>
+</preferences>
+
+ 31. Создать файл sklls.xml добавить информацию о скиллах которые будут изучены на курсе в формате XML
+ 
+VladimirDobranitsa@Vladimir MINGW64 /d/github/xml (main)
+$ cat > skills.xml
+<courses_skills>
+<skills>Basic theory SDLC, STLC.
+        Client-server architecture.
+        HTTP.
+        What is JSON, XML.
+        API testing via Postman (JS, API autotests).
+        Removing and reading logs from an external server.
+        Sniffing http web traffic via Charles and Fiddler.
+        Dev Tools of web browsers.
+        Mobile testing.
+        Feature iOS, Android, guidelines.
+        ADB (android device management).
+        Setting up proxy and vpn on iOS and Android.
+        Interception (sniffing) of mobile traffic via Charles and Fiddler on iOS and Android.
+        Command line (terminal) Linux.
+        Basics of bash scripting, automation of routine tasks on the server.
+        Access to remote servers.
+        SQL basics.
+        Load testing in Jmeter.
+        Scrum development methodology.
+        Python. Basic learning.
+</skills>
+</courses_skills>
+
+ 32. Сделать коммит в одну строку.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/xml (main)
+$ git commit -m "add preferences.xml skills.xml"
+[main 18b3258] add preferences.xml skills.xml
+ 2 files changed, 29 insertions(+)
+ create mode 100644 preferences.xml
+ create mode 100644 skills.xml
+
+ 33. Отправить сразу 2 файла на внешний репозиторий.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/xml (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 906 bytes | 453.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VladimirD25/XML.git
+   312d42d..18b3258  main -> main
+
+ 34. На веб интерфейсе создать файл bug_report.xml.
+
+https://github.com/VladimirD25/XML/blob/main/bug_report.xml
+
+ 35. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+
+add bug_report.xml
+
+ 36. На веб интерфейсе модифицировать файл bug_report.xml, добавить баг репорт в формате XML.
+
+<bug_report> 
+<id>B1</id>
+<summary>Incomplete digits displaying of the number of items in the cart when entering a three-digit value</summary>
+<preconditions>site is opened. 
+               any item added to cart. 
+               cart is opened.</preconditions>
+<steps_to_reproduce>1) enter '99' in the number of units of goods, press 'Enter'. 
+                    2) click on '+' button.</steps_to_reproduce>
+
+<expected_result>Full displaying of digits for the number of items in the cart</expected_result>
+<actual_result>the digits of the number of items in the cart are not displayed completely</actual_result>
+<severity>minor</severity>
+<priority>low</priority>
+<environment>windows 10 Chrome 107.0.5304.88</environment>
+<attachment>link</attachment>
+<reporter>Vladimir</reporter>
+</bug_report>
+
+ 37. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+
+modify bug_report.xml
+
+ 38. Синхронизировать внешний и локальный репозиторий XML
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/xml (main)
+$ git pull
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.71 KiB | 72.00 KiB/s, done.
+From https://github.com/VladimirD25/XML
+   18b3258..acf9a2f  main       -> origin/main
+Updating 18b3258..acf9a2f
+Fast-forward
+ bug_report.xml | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+ create mode 100644 bug_report.xml
+
+
+
+			TXT
+
+
+
+1. Создать внешний репозиторий c названием TXT.
+
+https://github.com/VladimirD25/TXT.git
+
+ 2. Клонировать репозиторий TXT на локальный компьютер.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github
+$ git clone https://github.com/VladimirD25/TXT.git
+Cloning into 'TXT'...
+warning: You appear to have cloned an empty repository.
+
+ 3. Внутри локального TXT создать файл “new.txt”.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/txt (main)
+$ touch new.txt
+
+ 4. Добавить файл под гит.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/txt (main)
+$ git add new.txt
+
+ 5. Закоммитить файл.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/txt (main)
+$ git commit -m "add new.txt"
+[main (root-commit) 261e4e8] add new.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 new.txt
+
+ 6. Отправить файл на внешний GitHub репозиторий.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/txt (main)
+$ git push
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 219 bytes | 219.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VladimirD25/TXT.git
+ * [new branch]      main -> main
+
+ 7. Отредактировать содержание файла “new.txt” - написать информацию о себе (ФИО, возраст, количество домашних животных, будущая желаемая зарплата). Всё написать в формате TXT.
+ 
+VladimirDobranitsa@Vladimir MINGW64 /d/github/txt (main)
+$ vim new.txt
+
+First name - Vladimir,
+Second name - Olegovich,
+Last name - Dobranitsa,
+Age - 35,
+Pets - None,
+Future salary - $400.
+
+ 8. Отправить изменения на внешний репозиторий.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/txt (main)
+$ git commit -am "modify new.txt"
+warning: in the working copy of 'new.txt', LF will be replaced by CRLF the next time Git touches it
+[main 3394ac4] modify new.txt
+ 1 file changed, 6 insertions(+)
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/txt (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 349 bytes | 349.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VladimirD25/TXT.git
+   261e4e8..3394ac4  main -> main
+
+ 9. Создать файл preferences.txt
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/txt (main)
+$ touch preferences.txt
+
+ 10. В файл preferences.txt” добавить информацию о своих предпочтениях (Любимый фильм, любимый сериал, любимая еда, любимое время года, сторона которую хотели бы посетить) в формате TXT.
+ 
+VladimirDobranitsa@Vladimir MINGW64 /d/github/txt (main)
+$ vim preferences.txt
+
+ 11. Создать файл sklls.txt добавить информацию о скиллах которые будут изучены на курсе в формате TXT
+ 
+VladimirDobranitsa@Vladimir MINGW64 /d/github/txt (main)
+$ cat > skills.txt
+
+Skills:
+1) Basic theory SDLC, STLC;
+2) Client-server architecture;
+3) HTTP;
+4) What is JSON, XML;
+5) API testing via Postman (JS, API autotests);
+6) Removing and reading logs from an external server;
+7) Sniffing http web traffic via Charles and Fiddler";
+8) Dev Tools of web browsers;
+9) Mobile testing;
+10) Feature iOS, Android, guidelines;
+11) ADB (android device management);
+12) Setting up proxy and vpn on iOS and Android;
+13) Interception (sniffing) of mobile traffic via Charles and Fiddler on iOS and Android;
+14) Command line (terminal) Linux;
+15) Basics of bash scripting, automation of routine tasks on the server;
+16) Access to remote servers;
+17) SQL basics;
+18) Load testing in Jmeter;
+19) Scrum development methodology;
+20) Python. Basic learning.
+
+
+ 12. Сделать коммит в одну строку.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/txt (main)
+$  git commit -am "modify preferences.txt add skills.txt"
+[main 0e8e3ec] modify preferences.txt add skills.txt
+ 2 files changed, 28 insertions(+)
+ create mode 100644 preferences.txt
+ create mode 100644 skills.txt
+
+ 13. Отправить сразу 2 файла на внешний репозиторий.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/txt (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 987 bytes | 493.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/VladimirD25/TXT.git
+   3394ac4..0e8e3ec  main -> main
+
+ 14. На веб интерфейсе создать файл bug_report.txt.
+
+https://github.com/VladimirD25/TXT/new/main?readme=1
+
+ 15. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+
+add bug_repot.txt
+
+ 16. На веб интерфейсе модифицировать файл bug_report.txt, добавить баг репорт в формате TXT.
+ 
+Bug report:
+
+1. id - B1;
+2. Summary - Incomplete digits displaying of the number of items in the cart when entering a three-digit value;
+3. Preconditions - site is opened, 
+                 - any item added to cart, 
+                 - cart is opened;
+                 
+4. Steps to reproduce - 1) enter '99' in the number of units of goods, press 'Enter', 
+                        2) click on '+' button;
+5. Expected result - Full displaying of digits for the number of items in the cart;
+6. Actual result - the digits of the number of items in the cart are not displayed completely;
+7. Severity - minor;
+8. Priority - low;
+9. Environment - windows 10 Chrome 107.0.5304.88;
+10.Attachment - link;
+11.Reporter - Vladimir.
+
+ 17. Сделать Commit changes (сохранить) изменения на веб интерфейсе.
+
+modify bug_report.txt
+
+ 18. Синхронизировать внешний и локальный репозиторий TXT
+
+VladimirDobranitsa@Vladimir MINGW64 /d/github/txt (main)
+$ git pull
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), 1.70 KiB | 72.00 KiB/s, done.
+From https://github.com/VladimirD25/TXT
+   8cb5d94..68cf2cb  main       -> origin/main
+Updating 8cb5d94..68cf2cb
+Fast-forward
+ bug_report.txt | 19 +++++++++++++++++++
+ 1 file changed, 19 insertions(+)
+ create mode 100644 bug_report.txt
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

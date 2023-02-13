@@ -1,0 +1,58 @@
+1. На локальном репозитории сделать ветки для:
+- Postman
+- Jmeter
+- CheckLists
+- Bag Reports
+- SQL
+- Charles
+- Mobile testing
+
+2. Запушить все ветки на внешний репозиторий
+
+
+3. В ветке Bag Reports сделать текстовый документ со структурой баг репорта
+
+1) ID
+2) Summary/Title
+3) Steps to reproduce
+4) Expected result
+5) Actual result
+6) Environment
+7) Project
+8) Build
+9) Severity
+10) Priority
+11) Assigned to
+12) Reporter
+13) Attachment
+
+
+4. Запушить структуру багрепорта на внешний репозиторий
+
+
+5. Вмержить ветку Bag Reports в Main
+
+
+6. Запушить main на внешний репозиторий.
+
+
+7. В ветке CheckLists набросать структуру чек листа.
+
+
+1) ID
+2) Module
+3) Summary
+4) Enviroment
+5) Expected Result
+6) Status
+7) Bug report link
+
+
+8. Запушить структуру на внешний репозиторий
+
+
+9. На внешнем репозитории сделать Pull Request ветки CheckLists в main
+
+
+10. Синхронизировать Внешнюю и Локальную ветки Main
+
