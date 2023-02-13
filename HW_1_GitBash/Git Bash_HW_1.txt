@@ -1,0 +1,210 @@
+1) Посмотреть где я
+$ pwd
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git
+
+2) Создать папку
+$ mkdir home_work_1
+
+3) Зайти в папку
+$ cd home_work_1
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git/home_work_1
+
+4) Создать 3 папки
+$ mkdir dir_{1..3}
+
+5) Зайти в любоую папку
+$ cd dir_1
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git/home_work_1/dir_1
+
+6) Создать 5 файлов (3 txt, 2 json)
+
+$ touch one.txt two.txt three.txt one.json two.json
+
+7) Создать 3 папки
+$ mkdir folder_{1..3}
+
+8. Вывести список содержимого папки
+$ ls -la
+
+total 4
+drwxr-xr-x 1 VladimirDobranitsa 197121 0 Nov  7 16:25 ./
+drwxr-xr-x 1 VladimirDobranitsa 197121 0 Nov  7 16:19 ../
+drwxr-xr-x 1 VladimirDobranitsa 197121 0 Nov  7 16:25 folder_1/
+drwxr-xr-x 1 VladimirDobranitsa 197121 0 Nov  7 16:25 folder_2/
+drwxr-xr-x 1 VladimirDobranitsa 197121 0 Nov  7 16:25 folder_3/
+-rw-r--r-- 1 VladimirDobranitsa 197121 0 Nov  7 16:24 one.json
+-rw-r--r-- 1 VladimirDobranitsa 197121 0 Nov  7 16:24 one.txt
+-rw-r--r-- 1 VladimirDobranitsa 197121 0 Nov  7 16:24 three.txt
+-rw-r--r-- 1 VladimirDobranitsa 197121 0 Nov  7 16:24 two.json
+-rw-r--r-- 1 VladimirDobranitsa 197121 0 Nov  7 16:24 two.txt
+
+9) + Открыть любой txt файл
+$ vim one.txt
+
+10) + написать туда что-нибудь, любой текст.
+
+1) One
+2) Two
+3) Three
+4) one
+5) two
+6) three
+7) One
+8) Two
+9) Three
+10) one
+11) two
+12) three
+
+11) + сохранить и выйти.
+Esc :wq
+
+12) Выйти из папки на уровень выше
+$ cd ..
+—
+13) переместить любые 2 файла, которые вы создали, в любую другую папку.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git/home_work_1
+$ mv d:/git/home_work_1/dir_1/{two.txt,two.json} d:/git/home_work_1/dir_2
+
+14) скопировать любые 2 файла, которые вы создали, в любую другую папку.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git/home_work_1
+$ cp d:/git/home_work_1/dir_2/{two.txt,two.json} d:/git/home_work_1/dir_1
+
+15) Найти файл по имени
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git/home_work_1
+$ find -name "one.txt"
+./dir_1/one.txt
+
+16) просмотреть содержимое в реальном времени (команда grep) изучите как она работает.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git/home_work_1/dir_1
+$ ls | grep 'one'
+one.json
+one.txt
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git/home_work_1/dir_1
+$ grep 'one' one.txt
+4) one
+10) one
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git/home_work_1/dir_1
+$ grep -i 'one' one.txt
+1) One
+4) one
+7) One
+10) one
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git/home_work_1/dir_1
+$ grep 'One' one.txt
+1) One
+7) One
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git/home_work_1/dir_1
+$ grep -c one one.txt
+2
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git/home_work_1/dir_1
+$ grep -c One one.txt
+2
+
+
+17) вывести несколько первых строк из текстового файла
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git/home_work_1/dir_1
+$ head -n 3 one.txt
+1) One
+2) Two
+3) Three
+
+18) вывести несколько последних строк из текстового файла
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git/home_work_1/dir_1
+$ tail -n 3 one.txt
+10) one
+11) two
+12) three
+
+19) просмотреть содержимое длинного файла (команда less) изучите как она работает.
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git/home_work_1/dir_1
+$ less one.txt
+
+1) One
+2) Two
+3) Three
+4) one
+5) two
+6) three
+7) One
+8) Two
+9) Three
+10) one
+11) two
+12) three
+one.txt (END)
+
+20) вывести дату и время
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git/home_work_1
+$ date
+Mon Nov  6 17:36:32     2022
+
+
+*Задание *
+1) Отправить http запрос на сервер.
+http://162.55.220.72:5005/terminal-hw-request
+
+- GET - 
+
+VladimirDobranitsa@Vladimir MINGW64 /d/courses/ksendzov/git/first
+$  curl 'http://162.55.220.72:5005/get_method?name=Vladimir&age=35'
+[
+  "Vladimir",
+  "35"
+]
+
+2) Написать скрипт который выполнит автоматически пункты 3, 4, 5, 6, 7, 8, 13
+
+$ touch script.txt
+
+$ vim script.txt (press Insert
+
+#!/bin/bash
+cd script
+mkdir dir_{1..3}
+cd dir_1
+touch one.txt two.txt three.txt four.txt five.txt
+mkdir test_{1..3}
+ls -la
+mv d:/git/script/dir_1/{four.txt,five.txt} d:/git/script/dir_2
+
+press Esc, type :wq + Enter
+) 
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git
+$ chmod +x ./script.txt
+
+VladimirDobranitsa@Vladimir MINGW64 /d/git
+$ ./script.txt
+total 8
+drwxr-xr-x 1 VladimirDobranitsa 197121 0 Nov  7 20:06 .
+drwxr-xr-x 1 VladimirDobranitsa 197121 0 Nov  7 20:06 ..
+-rw-r--r-- 1 VladimirDobranitsa 197121 0 Nov  7 20:06 five.txt
+-rw-r--r-- 1 VladimirDobranitsa 197121 0 Nov  7 20:06 four.txt
+-rw-r--r-- 1 VladimirDobranitsa 197121 0 Nov  7 20:06 one.txt
+drwxr-xr-x 1 VladimirDobranitsa 197121 0 Nov  7 20:06 test_1
+drwxr-xr-x 1 VladimirDobranitsa 197121 0 Nov  7 20:06 test_2
+drwxr-xr-x 1 VladimirDobranitsa 197121 0 Nov  7 20:06 test_3
+-rw-r--r-- 1 VladimirDobranitsa 197121 0 Nov  7 20:06 three.txt
+-rw-r--r-- 1 VladimirDobranitsa 197121 0 Nov  7 20:06 two.txt
+
+
+
+
+
